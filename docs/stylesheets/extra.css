@@ -1,0 +1,57 @@
+.md-typeset__table {
+   min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+    font-size: 0.72rem;
+}
+
+/* Light table header  */
+.md-typeset table:not([class]) th {
+  /* background-color: var(--md-default-fg-color--lightest); */
+  background-color: rgba(0,0,0,.1);
+  color: var(--md-default-bg-color--dark);
+  border-top: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Add border-top to first table child */
+.md-typeset table:not([class]) tr:first-child td { 
+  border-top: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Add border-bottom to last table child */
+.md-typeset table:not([class]) tr:last-child td { 
+  border-bottom: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Reset table hover effect */
+.md-typeset table:not([class]) tr:hover {
+  background-color: transparent;
+}
+
+td:nth-child(1) {  
+  background-color: var(--md-code-bg-color)
+}
+
+.md-typeset h4 {
+  margin: 1.5rem 0 0 0;
+}
+
+.md-typeset h3 {
+  margin: 1.6rem 0 0rem;
+}
+
+.md-typeset h2 {
+  color: var(--md-primary-fg-color);
+  margin: 2rem 0 0.4rem;
+}
+
+.md-typeset p {
+  margin: 0.2rem 0 0.4rem
+}
+
+/* Adjust code style */
+.md-typeset code {
+  font-size: 0.85em;
+}

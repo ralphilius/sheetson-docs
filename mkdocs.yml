@@ -1,0 +1,74 @@
+# Project information
+site_name: Sheetson Docs
+site_description: Documentation for consuming Sheetson APIs
+site_author: Ralphilius
+site_url: https://docs.sheetson.com/
+
+# Repository
+#repo_name: squidfunk/mkdocs-material
+#repo_url: https://github.com/squidfunk/mkdocs-material
+
+# Copyright
+copyright: Copyright &copy; 2019 - 2020 Sheetson
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  palette:
+    primary: teal
+    accent: teal
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - instant
+    # - tabs
+
+extra_css:
+  - stylesheets/extra.css
+# Extras
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github-alt
+#       link: https://github.com/squidfunk
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/squidfunk
+#     - icon: fontawesome/brands/linkedin
+#       link: https://linkedin.com/in/squidfunk
+
+# Google Analytics
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+
+# Extensions
+markdown_extensions:
+  - meta
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+
+nav:
+  - Getting Started: index.md
+  - Documentation: 
+    - Overview: documentation.md
+    - CRUD Requests: crud.md
+    - Queries: queries.md
+    - Error Codes: error-codes.md
+  - CLI Reference: cli.md
