@@ -1,5 +1,5 @@
 # Project information
-site_name: Sheetson Docs
+site_name: Sheetson
 site_description: Documentation for consuming Sheetson APIs
 site_author: Ralphilius
 site_url: https://docs.sheetson.com/
@@ -28,6 +28,9 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
 # Extras
 # extra:
 #   social:
@@ -45,6 +48,7 @@ google_analytics:
 
 # Extensions
 markdown_extensions:
+  - markdown.extensions.attr_list
   - meta
   - admonition
   - codehilite:
@@ -65,10 +69,18 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Getting Started: index.md
-  - Documentation: 
-    - Overview: documentation.md
-    - CRUD Requests: crud.md
-    - Queries: queries.md
-    - Error Codes: error-codes.md
-  - CLI Reference: cli.md
+  - Introduction: index.md
+  - Getting Started: getting-started.md
+  - Manage data:
+    - Add data: manage-data/create-rows.md
+    - Read data: manage-data/retrieve-rows.md
+    - Update data: manage-data/update-rows.md
+    - Delete data: manage-data/delete-rows.md
+    - Paginate & filter data: manage-data/paginate-filter.md
+  - Status Codes: status-codes.md
+  - Reference: 
+    - list: reference/list.md
+    - create: reference/create.md
+    - read: reference/read.md
+    - update: reference/update.md
+    - delete: reference/delete.md
