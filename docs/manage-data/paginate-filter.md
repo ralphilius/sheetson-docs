@@ -92,7 +92,7 @@ For example, to retrieve cities with population between 10,000,000 and 30,000,00
 ## Order data
 
 !!! danger ""
-    Search data is only available in paid plans.
+    Order data is only available in paid plans.
 
 By default, rows are returned by order displayed in a worksheet. We can use the order parameter to specify a field to sort by. Prefixing with a negative sign reverses the order. In order to retrieve cities by population ascending order:
 
