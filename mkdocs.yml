@@ -23,7 +23,7 @@ theme:
     code: Roboto Mono
   features:
     - instant
-    # - tabs
+    - tabs
 
 extra_css:
   - stylesheets/extra.css
@@ -42,7 +42,7 @@ extra_javascript:
 
 # Google Analytics
 google_analytics:
-  - UA-XXXXXXXX-X
+  - UA-140467782-1
   - auto
 
 # Extensions
