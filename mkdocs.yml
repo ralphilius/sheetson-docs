@@ -42,7 +42,7 @@ extra_javascript:
 
 # Google Analytics
 google_analytics:
-  - UA-XXXXXXXX-X
+  - UA-140467782-1
   - auto
 
 # Extensions
