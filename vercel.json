@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    
+    { "src": "mkdocs/scripts/build.py", "use": "@now/python" }
+  ],
+  "routes": [
+    { "src": "/codelab*", "dest": "codelab$1" },
+    { "src": "(.*)", "dest": "mkdocs/site$1" }
+  ]
+}

@@ -68,18 +68,22 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Introduction: index.md
-  - Getting Started: getting-started.md
-  - Manage data:
-    - Add data: manage-data/create-rows.md
-    - Read data: manage-data/retrieve-rows.md
-    - Update data: manage-data/update-rows.md
-    - Delete data: manage-data/delete-rows.md
-    - Paginate & filter data: manage-data/paginate-filter.md
-  - Status Codes: status-codes.md
-  - Reference: 
-    - list: reference/list.md
-    - create: reference/create.md
-    - read: reference/read.md
-    - update: reference/update.md
-    - delete: reference/delete.md
+  - Home: 
+    - Introduction: index.md
+    - Getting Started: getting-started.md
+    - Manage data:
+      - Add data: manage-data/create-rows.md
+      - Read data: manage-data/retrieve-rows.md
+      - Update data: manage-data/update-rows.md
+      - Delete data: manage-data/delete-rows.md
+      - Paginate & filter data: manage-data/paginate-filter.md
+    - Status Codes: status-codes.md
+    - Reference: 
+      - list: reference/list.md
+      - create: reference/create.md
+      - read: reference/read.md
+      - update: reference/update.md
+      - delete: reference/delete.md
+  - Examples:
+    - Portfolio: examples/portfolio.md
+    - FAQ: examples/faq.md
