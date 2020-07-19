@@ -32,7 +32,7 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities", {
       method: "POST",
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
