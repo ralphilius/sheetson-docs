@@ -36,7 +36,7 @@ You can retrieve a row's contents by sending a GET request to the `rowIndex` URL
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities/3", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities/3", {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
@@ -68,7 +68,7 @@ You can retrieve multiple objects at once by sending a `GET` request to the clas
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities", {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
