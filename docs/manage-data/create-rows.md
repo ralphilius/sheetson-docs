@@ -12,7 +12,7 @@ To get started, we prepare a sheet named **Cities** as below:
 </div>
 
 !!! important "Note"
-    Please prepare the same data as above in a new (or existing) spreadsheet. You will need to use your Spreadsheet ID as descibed in [Getting Started](/getting-started) in example codes.
+    Please prepare the same data as above in a new (or existing) spreadsheet. You will need to use your Spreadsheet ID as descibed in [Getting Started](/getting-started) in example codes. Also, please make sure you don't include the curly braces "{" and "}" around YOUR_API_KEY and YOUR_SPREADSHEET_ID. Finally, please be aware that you might need to use https instead.
 
 ## Add a row
 
@@ -32,7 +32,7 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Demo", {
+    fetch("http://api.sheetson.com/v2/sheets/Cities", {
       method: "POST",
       headers: {
         "Authorization": "Bearer {YOUR_API_KEY}",
