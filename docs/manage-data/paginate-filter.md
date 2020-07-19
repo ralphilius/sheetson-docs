@@ -30,7 +30,7 @@ To get started, we prepare a sheet named **Cities** as below:
 !!! danger ""
     Search data is only available in paid plans.
 
-We can look up data in a worksheet in several ways by using `where` URL parameter. The value of the where parameter should be encoded JSON. To look up cities in USA:
+We can look up data in a worksheet in several ways by using `where` URL parameter. The value of the where parameter should be JSON encoded. To look up cities in USA:
 
 === "cURL"
     ``` shell
