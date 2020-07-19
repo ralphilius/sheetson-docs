@@ -20,10 +20,10 @@ To delete a row from **Cities** sheet, send a DELETE request to its `rowIndex` U
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities/3" \
+    curl "https://api.sheetson.com/v2/sheets/Cities/3" \
     -X DELETE \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     ```
 
 === "Javascript"
@@ -32,8 +32,8 @@ To delete a row from **Cities** sheet, send a DELETE request to its `rowIndex` U
     fetch("http://api.sheetson.com/v2/sheets/Cities/3", {
       method: "DELETE",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}"
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
       }
     }).then(r => r.json())
     .then(result => console.log(result))
