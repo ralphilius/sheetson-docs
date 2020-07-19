@@ -12,7 +12,7 @@ To get started, we prepare a sheet named **Cities** as below:
 </div>
 
 !!! important "Note"
-    Please prepare the same data as above in a new (or existing) spreadsheet. You will need to use your Spreadsheet ID as descibed in [Getting Started](/getting-started) in example codes. Also, please make sure you don't include the curly braces "{" and "}" around YOUR_API_KEY and YOUR_SPREADSHEET_ID. Finally, please be aware that you might need to use https instead.
+    Please prepare the same data as above in a new (or existing) spreadsheet. You will need to use your Spreadsheet ID as descibed in [Getting Started](/getting-started) in example codes.
 
 ## Add a row
 
@@ -20,10 +20,10 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities" \
+    curl "https://api.sheetson.com/v2/sheets/Cities" \
     -X POST \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     -H "Content-Type: application/json" \
     -d '{"name": "San Francisco", "state": "CA", "country": "USA", "population": "860000"}'
     
@@ -35,8 +35,8 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
     fetch("http://api.sheetson.com/v2/sheets/Cities", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}",
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({name: 'San Francisco', state: 'CA', country: 'USA', population: 860000})
