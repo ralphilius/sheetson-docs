@@ -28,9 +28,9 @@ You can retrieve a row's contents by sending a GET request to the `rowIndex` URL
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities/3" \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    curl "https://api.sheetson.com/v2/sheets/Cities/3" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     ```
 
 === "Javascript"
@@ -38,8 +38,8 @@ You can retrieve a row's contents by sending a GET request to the `rowIndex` URL
     const fetch = require('isomorphic-fetch');
     fetch("http://api.sheetson.com/v2/sheets/Cities/3", {
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}"
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
       }
     }).then(r => r.json())
     .then(result => console.log(result))
@@ -60,9 +60,9 @@ You can retrieve multiple objects at once by sending a `GET` request to the clas
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities" \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    curl "https://api.sheetson.com/v2/sheets/Cities" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     ```
 
 === "Javascript"
@@ -70,8 +70,8 @@ You can retrieve multiple objects at once by sending a `GET` request to the clas
     const fetch = require('isomorphic-fetch');
     fetch("http://api.sheetson.com/v2/sheets/Cities", {
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}"
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
       }
     }).then(r => r.json())
     .then(result => console.log(result))
