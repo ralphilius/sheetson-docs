@@ -29,7 +29,7 @@ To delete a row from **Cities** sheet, send a DELETE request to its `rowIndex` U
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities/3", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities/3", {
       method: "DELETE",
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
