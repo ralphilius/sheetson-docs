@@ -32,7 +32,7 @@ For example, to change population of San Francisco in **Cities** sheet.
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities/2", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities/2", {
       method: "PUT",
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
