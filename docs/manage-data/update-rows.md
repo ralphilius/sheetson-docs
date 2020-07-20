@@ -21,10 +21,10 @@ For example, to change population of San Francisco in **Cities** sheet.
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities/2" \
+    curl "https://api.sheetson.com/v2/sheets/Cities/2" \
     -X PUT \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     -H "Content-Type: application/json" \
     -d '{"population" : 3314000}'
     ```
@@ -32,11 +32,11 @@ For example, to change population of San Francisco in **Cities** sheet.
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Cities/2", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities/2", {
       method: "PUT",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}",
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({"population" : 3314000})

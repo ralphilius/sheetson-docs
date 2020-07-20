@@ -20,10 +20,10 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
 
 === "cURL"
     ``` shell
-    curl "http://api.sheetson.com/v2/sheets/Cities" \
+    curl "https://api.sheetson.com/v2/sheets/Cities" \
     -X POST \
-    -H "Authorization: Bearer {YOUR_API_KEY}" \
-    -H "X-Spreadsheet-Id: {YOUR_SPREADSHEET_ID}" \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
     -H "Content-Type: application/json" \
     -d '{"name": "San Francisco", "state": "CA", "country": "USA", "population": "860000"}'
     
@@ -32,11 +32,11 @@ To create a new row in **Cities** sheet, send a POST request to that sheet API e
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("http://api.sheetson.com/v2/sheets/Demo", {
+    fetch("https://api.sheetson.com/v2/sheets/Cities", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
-        "X-Spreadsheet-Id": "{YOUR_SPREADSHEET_ID}",
+        "Authorization": "Bearer YOUR_API_KEY",
+        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({name: 'San Francisco', state: 'CA', country: 'USA', population: 860000})
