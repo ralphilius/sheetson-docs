@@ -101,7 +101,7 @@ The return value is a JSON object that contains a `results` field with a JSON ar
 ```
 
 ## Filter rows
-There are several ways to filter rows based on specific criteria. Refer to [Paginate & refine data](/paginate-filter) in order to perform below operations:
+There are several ways to filter rows based on specific criteria. Refer to [Paginate & refine data](/manage-data/paginate-filter) in order to perform below operations:
 
  - Paginate between multiple results set
  - Limit number of rows returned
