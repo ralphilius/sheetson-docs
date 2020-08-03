@@ -12,7 +12,7 @@ Below API specs allow to create a new row at the last row of a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### Request body

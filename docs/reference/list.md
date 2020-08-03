@@ -2,7 +2,7 @@
 Below API specs allow to read data of multiple rows in a worksheet.
 
 ### HTTP Request
-`POST https://api.sheetson.com/v2/sheets/`_**sheetName**_
+`GET https://api.sheetson.com/v2/sheets/`_**sheetName**_
 
 ### Path Parameters
 |**Parameters**| &nbsp;
@@ -12,7 +12,7 @@ Below API specs allow to read data of multiple rows in a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### URL Parameters

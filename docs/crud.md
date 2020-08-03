@@ -21,7 +21,7 @@ Below API specs allow to create a new row at the last row of a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### Request body
@@ -36,7 +36,7 @@ Response body contains JSON object with `rowIndex` and requesting data.
     ``` shell
     curl "http://api.sheetson.com/v2/sheets/Demo" \
     -X POST \
-    -H "API-Key: {YOUR_API_KEY}" \
+    -H "API-Key: YOUR_API_KEY" \
     -H "X-Spreadsheet-Id: 1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM" \
     -H "Content-Type: application/json" \
     -d '{"email" : "something@example.com"}'
@@ -48,7 +48,7 @@ Response body contains JSON object with `rowIndex` and requesting data.
     fetch("http://api.sheetson.com/v2/sheets/Demo", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
+        "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM"
       },
       body: JSON.stringify({email: "something@example.com"})
@@ -80,7 +80,7 @@ Below API specs allow to retrieve a row data at a specific index of a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### Request body
@@ -94,7 +94,7 @@ Response body contains JSON object with `rowIndex` and all cell data that has he
 === "cURL"
     ``` shell
     curl "http://api.sheetson.com/v2/sheets/Demo/1" \
-    -H "API-Key: {YOUR_API_KEY}" \
+    -H "API-Key: YOUR_API_KEY" \
     -H "X-Spreadsheet-Id: 1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM" \
     ```
 
@@ -103,7 +103,7 @@ Response body contains JSON object with `rowIndex` and all cell data that has he
     const fetch = require('isomorphic-fetch');
     fetch("http://api.sheetson.com/v2/sheets/Demo", {
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
+        "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM"
       }
     }).then(r => r.json())
@@ -136,7 +136,7 @@ Below API specs allow to update data of a specific row of a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### Request body
@@ -151,7 +151,7 @@ Response body contains JSON object with `rowIndex` and requesting data.
     ``` shell
     curl "http://api.sheetson.com/v2/sheets/Demo/1234" \
     -X POST \
-    -H "API-Key: {YOUR_API_KEY}" \
+    -H "API-Key: YOUR_API_KEY" \
     -H "X-Spreadsheet-Id: 1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM" \
     -H "Content-Type: application/json" \
     -d '{"email" : "something@example.com"}'
@@ -163,7 +163,7 @@ Response body contains JSON object with `rowIndex` and requesting data.
     fetch("http://api.sheetson.com/v2/sheets/Demo", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer {YOUR_API_KEY}",
+        "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "1h-Eet6qTsPrdL5IVwiAvPXH47wjEludJVpwrpdCWEuM"
       },
       body: JSON.stringify({email: "something@example.com"})

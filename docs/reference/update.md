@@ -2,7 +2,7 @@
 Below API specs allow to update data of a specific row in a worksheet.
 
 ### HTTP Request
-`POST https://api.sheetson.com/v2/sheets/`_**sheetName**_`/`_**rowIndex**_
+`PATCH https://api.sheetson.com/v2/sheets/`_**sheetName**_`/`_**rowIndex**_
 
 ### Path Parameters
 |**Parameters**| &nbsp;
@@ -13,7 +13,7 @@ Below API specs allow to update data of a specific row in a worksheet.
 ### Headers
 |**Parameters**| &nbsp;
 |-------|---------
-|`Authorization`| `Bearer {YOUR_API_KEY}`
+|`Authorization`| `Bearer YOUR_API_KEY`
 |`X-Spreadsheet-Id`| `string` <br/> The ID of the spreadsheet to create new a row
 
 ### Request body
