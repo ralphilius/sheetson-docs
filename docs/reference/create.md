@@ -2,7 +2,7 @@
 Below API specs allow to create a new row at the last row of a worksheet.
 
 ### HTTP Request
-`POST https://api.sheetson.com/v2/sheets/{sheetName}`
+`POST https://api.sheetson.com/v2/sheets/`_**sheetName**_``
 
 ### Path Parameters
 |**Parameters**| &nbsp;
