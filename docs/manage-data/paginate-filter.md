@@ -107,7 +107,7 @@ By default, rows are returned by order displayed in a worksheet. We can use the 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('order=population')}`, {
+    fetch(`https://api.sheetson.com/v2/sheets/Cities?order=population`, {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
@@ -129,7 +129,7 @@ To get cities by population in descending order:
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('order=-population')}`, {
+    fetch(`https://api.sheetson.com/v2/sheets/Cities?order=-population`, {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
@@ -154,7 +154,7 @@ By default, each time we request multiple rows, the maximum number of rows to re
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('skip=100,limit=100')}`, {
+    fetch(`https://api.sheetson.com/v2/sheets/Cities?skip=100&limit=100`, {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
@@ -181,7 +181,7 @@ To save bandwidth, we can choose to return only needed fields by using `keys` pa
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('keys=name,country')}`, {
+    fetch(`https://api.sheetson.com/v2/sheets/Cities?keys=name,country`, {
       headers: {
         "Authorization": "Bearer YOUR_API_KEY",
         "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
