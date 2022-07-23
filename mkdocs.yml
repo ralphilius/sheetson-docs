@@ -23,7 +23,7 @@ theme:
     code: Roboto Mono
   features:
     # - instant
-    - tabs
+    - navigation.tabs
 
 extra_css:
   - stylesheets/extra.css
@@ -31,7 +31,10 @@ extra_css:
 extra_javascript:
   - javascripts/extra.js
 # Extras
-# extra:
+extra:
+  analytics:
+    provider: google
+    property: UA-140467782-1
 #   social:
 #     - icon: fontawesome/brands/github-alt
 #       link: https://github.com/squidfunk
@@ -39,11 +42,6 @@ extra_javascript:
 #       link: https://twitter.com/squidfunk
 #     - icon: fontawesome/brands/linkedin
 #       link: https://linkedin.com/in/squidfunk
-
-# Google Analytics
-google_analytics:
-  - UA-140467782-1
-  - auto
 
 # Extensions
 markdown_extensions:
@@ -62,7 +60,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tilde
   - toc:
       permalink: true
