@@ -36,20 +36,22 @@ We can look up data in a worksheet in several ways by using `where` URL paramete
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities" \
     -G --data-urlencode 'where={"country":"USA}' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('where={"country":"USA"}')}`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      where: '{"country":"USA"}',
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 See this lis below for all supported operations in `where` parameter:
@@ -72,20 +74,22 @@ For example, to retrieve cities with population between 10,000,000 and 30,000,00
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities" \
     -G --data-urlencode 'where={"population": {"$gte": 10000000, "$lte": 30000000}}' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?${encodeURIComponent('where={"population": {"$gte": 10000000, "$lte": 30000000}}')}`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      where: '{"population": {"$gte": 10000000, "$lte": 30000000}}',
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 
@@ -100,20 +104,22 @@ By default, rows are returned by order displayed in a worksheet. We can use the 
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities" \
     -G --data-urlencode 'order=population' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?order=population`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      order: "population",
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 To get cities by population in descending order:
@@ -122,20 +128,22 @@ To get cities by population in descending order:
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities" \
     -G --data-urlencode 'order=-population' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?order=-population`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      order: "-population",
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 ## Paginate data
@@ -147,20 +155,23 @@ By default, each time we request multiple rows, the maximum number of rows to re
     -G \
     --data-urlencode 'skip=100' \
     --data-urlencode 'limit=100' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?skip=100&limit=100`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      skip: 100,
+      limit: 100,
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 !!! tip
@@ -174,18 +185,20 @@ To save bandwidth, we can choose to return only needed fields by using `keys` pa
     curl "https://api.sheetson.com/v2/sheets/Cities" \
     -G \
     --data-urlencode 'keys=name,country' \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch(`https://api.sheetson.com/v2/sheets/Cities?keys=name,country`, {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      keys: "name,country",
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```

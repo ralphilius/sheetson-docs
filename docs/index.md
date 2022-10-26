@@ -12,9 +12,13 @@ Currently, all values in row object are returned with an exception of rowIndex w
 
 ## Keys & Authentication
 In order to protect your data, all API requests to Sheetson require an API Key which can be obtained in [Console](https://sheetson.com/console)
-You need to  provide an `Authentication` header with API Key as the value.
 
-> Authentication: Bearer `YOUR_API_KEY`
+You need to add `apiKey` as an URL parameter, otherwise the request would return a `403` status code.
+
+!!! tip "Note"
+    For data-manipulating operations (create, update, delete), `Authentication` header with API Key as the value is expected in the request.
+
+    > Authentication: Bearer `YOUR_API_KEY`
 
 ## Status Codes
 Every API request to Sheetson API returns a HTTP status code that reflect the result. Following codes should be returned by Sheetson API.

@@ -29,20 +29,22 @@ You can retrieve a row's contents by sending a GET request to the `rowIndex` URL
 === "cURL"
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities/3" \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    -G \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("https://api.sheetson.com/v2/sheets/Cities/3", {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities/3");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 The response body is a JSON object containing all the header fields, plus the `rowIndex` field:
@@ -68,13 +70,14 @@ You can retrieve multiple objects at once by sending a `GET` request to the clas
 === "Javascript"
     ``` javascript
     const fetch = require('isomorphic-fetch');
-    fetch("https://api.sheetson.com/v2/sheets/Cities", {
-      headers: {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "X-Spreadsheet-Id": "YOUR_SPREADSHEET_ID"
-      }
-    }).then(r => r.json())
-    .then(result => console.log(result))
+    const params = {
+      apiKey: "YOUR_API_KEY",
+      spreadsheetId: "YOUR_SPREADSHEET_ID"
+    }
+    const url = = new URL("https://api.sheetson.com/v2/sheets/Cities");
+    Object.keys(params).forEach(key => url.searchParams.append(key, encodeURIComponent(params[key])));
+    fetch(url).then(r => r.json())
+      .then(result => console.log(result))
     ```
 
 The return value is a JSON object that contains a `results` field with a JSON array that lists the objects
