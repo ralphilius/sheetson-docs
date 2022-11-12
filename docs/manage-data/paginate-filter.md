@@ -65,6 +65,7 @@ See this lis below for all supported operations in `where` parameter:
 |$gte | Greater Than or Equal To
 |$eq  | Equal To
 |$neq | Not Equal To
+|$text| Search for specific text (not case-sensitive)
 
 </div>
 
