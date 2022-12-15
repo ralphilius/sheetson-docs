@@ -63,8 +63,8 @@ You can retrieve multiple objects at once by sending a `GET` request to the clas
 === "cURL"
     ``` shell
     curl "https://api.sheetson.com/v2/sheets/Cities" \
-    -H "Authorization: Bearer YOUR_API_KEY" \
-    -H "X-Spreadsheet-Id: YOUR_SPREADSHEET_ID" \
+    --data-urlencode 'apiKey=YOUR_API_KEY' \
+    --data-urlencode 'spreadsheetId=YOUR_SPREADSHEET_ID' \
     ```
 
 === "Javascript"
