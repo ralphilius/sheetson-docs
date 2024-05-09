@@ -11,7 +11,7 @@ All responses will be in JSON. Input data passed through the request body can be
 Currently, all values in row object are returned with an exception of rowIndex which is automatically added to the results set.
 
 ## Keys & Authentication
-In order to protect your data, all API requests to Sheetson require an API Key which can be obtained in [Console](https://sheetson.com/console)
+In order to protect your data, all API requests to Sheetson require an API Key which can be obtained in [Dashboard](https://sheetson.com/dashboard)
 
 You need to add `apiKey` as an URL parameter, otherwise the request would return a `403` status code.
 
