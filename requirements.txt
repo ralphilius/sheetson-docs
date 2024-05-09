@@ -9,5 +9,5 @@ mkdocs-material==9.*
 mkdocs-material-extensions==1.0.3
 nltk==3.5
 pymdown-extensions==10.8.1
-regex==2020.4.4
+regex==2020.11.13
 Pygments==2.18.0
