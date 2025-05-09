@@ -9,7 +9,7 @@ site_url: https://docs.sheetson.com/
 #repo_url: https://github.com/squidfunk/mkdocs-material
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2020 Sheetson
+copyright: Copyright &copy; 2019 - 2025 Sheetson
 
 # Configuration
 theme:
@@ -45,7 +45,8 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - markdown.extensions.attr_list
+  - md_in_html
+  - attr_list
   - meta
   - admonition
   - codehilite:
