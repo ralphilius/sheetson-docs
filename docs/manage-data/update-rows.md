@@ -2,7 +2,7 @@
 
 ## Example data
 To get started, we prepare a sheet named **Cities** as below:
-<div class='example'>
+<div class='example' markdown='1'>
 
 | |A | B | C | D |
 |-|-------------|--|---|------|
@@ -54,7 +54,7 @@ The response body is a JSON object containing requesting data
 ```
 
 The sheet content should look like below:
-<div class='example'>
+<div class='example' markdown='1'>
 
 | |A | B | C | D |
 |-|-------------|--|---|------|

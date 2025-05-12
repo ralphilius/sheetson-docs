@@ -2,7 +2,7 @@
 
 ## Example data
 To get started, we prepare a sheet named **Cities** as below:
-<div class='example'>
+<div class='example' markdown='1'>
 
 | | A             | B     | C       | D          |
 |-| ------------- | ----- | ------- | ---------- |
@@ -40,7 +40,7 @@ To delete a row from **Cities** sheet, send a DELETE request to its `rowIndex` U
     ```
 
 When the deletion is successful, the HTTP response is a `204 No-Content` without any response body. The sheet content should look like below:
-<div class='example'>
+<div class='example' markdown='1'>
 
 | |A | B | C | D |
 |-|-------------|--|---|------|
