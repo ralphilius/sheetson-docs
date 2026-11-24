@@ -34,7 +34,7 @@ extra_javascript:
 extra:
   analytics:
     provider: google
-    property: G-JW8B4W56B2
+    property: G-WNC8HKWXXF
 #   social:
 #     - icon: fontawesome/brands/github-alt
 #       link: https://github.com/squidfunk
